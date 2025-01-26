@@ -73,8 +73,8 @@ volumes:
 If there are more than one answers, select only one of them
 
 ### Answer
-* -The hostname is the name of the service: **db***
-* -The port is **5432** because pgadmin and db are in the same network.*
+- *The hostname is the name of the service: **db***
+- *The port is **5432** because pgadmin and db are in the same network.*
 
 ##  Prepare Postgres
 
@@ -103,7 +103,7 @@ Run **ingest_data.py**
     --table_name=green_tripdata_2019-10 `
     --url=./data/green_tripdata_2019-10.csv.gz
 ```
-Run ingest_zone.py
+Run **ingest_zone.py**
 ```bash
     python ingest_zones.py `
     --user=postgres `
@@ -143,7 +143,7 @@ SELECT
     END AS distances,
     COUNT(*) AS trip_count
 FROM public."green_tripdata_2019-10"
-WHERE DATE(lpep_pickup_datetime) >= '2019-10-1' AND DATE(lpep_dropoff_datetime) < '2019-11-1' 
+WHERE DATE(lpep_pickup_datetime) >= '2019-10-01' AND DATE(lpep_dropoff_datetime) < '2019-11-01' 
 GROUP BY distances;
 ```
 
